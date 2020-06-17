@@ -61,7 +61,7 @@ bib file. It corresponds to bibtex grammar. The structure of the object graph
 (a.k.a. the meta-model) is given in the following image.
 
 
-![BibTeX meta-model](./txbibtex/bibtex.png)
+![BibTeX meta-model](https://github.com/igordejanovic/textx-bibtex/raw/master/txbibtex/txbibtex.png)
 
 
 This image is produced from the grammar using textX and PlantUML:
