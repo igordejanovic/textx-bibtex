@@ -23,14 +23,16 @@ A Python parser for BibTeX language implemented as a textX language.
 
 ## Installation
 
+Stable version (once it is published on PyPI):
+
 ```
 pip install textx-bibtex
 ```
 
-or for `master` branch version:
+or (currently the only option) for `master` branch version:
 
 ```
-pip install https://github.com/igordejanovic/textx-bibtex/...
+pip install https://github.com/igordejanovic/textx-bibtex/archive/master.zip
 ```
 
 
