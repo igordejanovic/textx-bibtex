@@ -4,13 +4,13 @@ similar.
 """
 import os
 from difflib import SequenceMatcher
+from textx import metamodel_for_language
 
-from bibparser import parse_bibtex
 
 BIB_FILE = '../references.bib'
 DOCS_FOLDER = '../docs/'
 
-bibfile = parse_bibtex(BIB_FILE)
+bibfile = metamodel_for_language('bibtex').model_from_file(BIB_FILE)
 
 bibkeys = [e.key for e in bibfile.entries
            if e.__class__.__name__ == 'BibRefEntry']

@@ -5,12 +5,13 @@ Usage:
 - Set BIB_FILE
 - python sort_fields.py > new_references.bib
 """
-from bibparser import parse_bibtex, bibfile_str
+from textx import metamodel_for_language
+from txbibtex import bibfile_str
 
 
 BIB_FILE = 'references.bib'
 
-bibfile = parse_bibtex(BIB_FILE)
+bibfile = metamodel_for_language('bibtex').model_from_file(BIB_FILE)
 
 # Sort order
 # Default order is 50

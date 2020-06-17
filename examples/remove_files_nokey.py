@@ -2,13 +2,13 @@
 Remove files with no corresponding key in the bib file
 """
 import os
-from bibparser import parse_bibtex
+from textx import metamodel_for_language
 
 BIB_FILE = '../references.bib'
 DOCS_FOLDER = '../docs/'
 
 
-bibfile = parse_bibtex(BIB_FILE)
+bibfile = metamodel_for_language('bibtex').model_from_file(BIB_FILE)
 bibkeys = [e.key for e in bibfile.entries
            if e.__class__.__name__ == 'BibRefEntry']
 

@@ -4,7 +4,8 @@ Normalize all bib keys to <author><year> and rename pdf files along the way.
 import os
 import unidecode
 import re
-from bibparser import parse_bibtex, bibfile_str
+from textx import metamodel_for_language
+from txbibtex import bibfile_str
 
 BIB_FILE = '../references.bib'
 DOCS_FOLDER = '../docs/'
@@ -12,7 +13,7 @@ DOCS_FOLDER = '../docs/'
 
 nonkeychars = re.compile('[^a-zA-Z0-9]')
 
-bibfile = parse_bibtex(BIB_FILE)
+bibfile = metamodel_for_language('bibtex').model_from_file(BIB_FILE)
 bibkeys = set([e.key for e in bibfile.entries
                if e.__class__.__name__ == 'BibRefEntry'])
 
