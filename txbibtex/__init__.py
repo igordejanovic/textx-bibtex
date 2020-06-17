@@ -38,7 +38,7 @@ def bibfile_str(self, bibfile, field_sort_order=None):
                       for v in bibfile.entries])
 
 
-def bibentry_str(bibentry, field_sort_order):
+def bibentry_str(bibentry, field_sort_order={}):
     if bibentry.__class__.__name__ == 'BibLineComment':
         s = bibentry.text
     elif bibentry.__class__.__name__ == 'BibComment':
