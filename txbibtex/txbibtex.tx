@@ -1,0 +1,42 @@
+BibFile:
+    entries+=BibEntry
+;
+
+BibEntry: BibLineComment | BibComment | BibPreamble | BibString | BibRefEntry;
+
+BibLineComment:
+    text=BibCommentLine
+;
+
+BibCommentLine: !/@/ /[^\n]+/;
+
+BibComment: '@' 'comment' '{'
+        text=/[^\}]*/
+    '}'
+;
+
+BibPreamble: '@' 'preamble' '{'
+        value=Value
+    '}'
+;
+
+BibString: '@' type='string' '{'
+        fields*=BibField[',']
+    '}'
+;
+
+BibRefEntry: '@' type=BibType '{' key=BibKey ','
+        fields*=BibField[',']
+        ','?
+    '}'
+;
+
+BibType: /\w+/;
+BibKey: /[^, =\t\}\n]+/;
+
+BibField: name=Ident '=' value=Value;
+
+Ident:  /[^\d]([^ \t\"#%\'\(\),={}])+/;
+
+Value: Piece+['#'];
+Piece: /\d+/ | '{' Piece* '}' | '"' Piece* '"' | /[^{}\"\"]+/;
