@@ -61,14 +61,14 @@ bib file. It corresponds to bibtex grammar. The structure of the object graph
 (a.k.a. the meta-model) is given in the following image.
 
 
-![BibTeX meta-model](https://github.com/igordejanovic/textx-bibtex/raw/master/txbibtex/txbibtex.png)
+![BibTeX meta-model](https://github.com/igordejanovic/textx-bibtex/raw/master/txbibtex/bibtex.png)
 
 
 This image is produced from the grammar using textX and PlantUML:
 
 ```
-textx generate txbibtex/txbibtex.tx --target plantuml
-plantuml txbibtex/txbibtex.pu
+textx generate txbibtex/bibtex.tx --target plantuml
+plantuml txbibtex/bibtex.pu
 ```
 
 You can now process the model like you would any other object model. E.g.
