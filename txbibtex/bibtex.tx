@@ -38,5 +38,5 @@ BibField: name=Ident '=' value=Value;
 
 Ident:  /[^\d]([^ \t\"#%\'\(\),={}])+/;
 
-Value: Piece+['#'];
-Piece: /\d+/ | '{' Piece* '}' | '"' Piece* '"' | /[^{}\"\"]+/;
+Value: '"' Piece+['#'] '"' | Piece+['#'];
+Piece: /\d+/ | '{' Piece* '}' | /[^{}]+/;
