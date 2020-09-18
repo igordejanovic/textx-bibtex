@@ -16,7 +16,7 @@ A Python parser for BibTeX language implemented as a textX language.
 - Recently I decided to cleanup my BibTeX references and wasn't fully satisfied
   by the parsers available, so I decided to make one in textX. I don't claim
   that this is in any way better than any other, but it did the job for me (see
-  examples folder for ideas) in the implementation is very short and easily
+  examples folder for ideas) and the implementation is very short and easily
   hackable.
 - It is fun to make languages in textX!
 
