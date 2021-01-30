@@ -30,8 +30,9 @@ keys = {ref for cite in orgfile.cites for ref in cite.refs}
 bibentries = {e.key: e for e in bib_in.entries if e.__class__.__name__ == 'BibRefEntry'}
 
 with open(BIB_OUT, 'w') as f:
-    for key in keys:
+    for key in sorted(keys):
         if key not in bibentries:
             print('Key "{}" not found in reference database.'.format(key))
         else:
             f.write(bibentry_str(bibentries[key]))
+            f.write('\n')
