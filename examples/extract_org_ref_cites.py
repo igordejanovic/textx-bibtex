@@ -16,7 +16,7 @@ ORGFILE, BIB_IN, BIB_OUT = sys.argv[1:]
 
 cite_grammar = r'''
 Cites: (/(?!cite)./ | cites+=Cite | 'cite' )*;
-Cite: 'cite:' refs+=ID[','];
+Cite[noskipws]: /\s*/ 'cite:' refs+=ID[','];
 '''
 
 # Get the textX model from the bib file
