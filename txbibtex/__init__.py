@@ -33,7 +33,7 @@ def bibtex_language():
     return mm
 
 
-def bibfile_str(self, bibfile, field_sort_order=None):
+def bibfile_str(bibfile, field_sort_order=None):
     return '\n'.join([bibentry_str(v, field_sort_order)
                       for v in bibfile.entries])
 
