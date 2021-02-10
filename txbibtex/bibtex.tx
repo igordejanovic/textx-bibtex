@@ -34,9 +34,9 @@ BibRefEntry: '@' type=BibType '{' key=BibKey ','
 BibType: /\w+/;
 BibKey: /[^, =\t\}\n]+/;
 
-BibField: name=Ident '=' value=Value;
+BibField: name=Ident '=' /\s*/ value=Value;
 
 Ident:  /[^\d]([^ \t\"#%\'\(\),={}])+/;
 
 Value: '"' Piece+['#'] '"' | Piece+['#'];
-Piece: /\d+/ | '{' Piece* '}' | /[^{}]+/;
+Piece[noskipws]: /\d+/ | '{' Piece* '}' | /[^{}]+/;
