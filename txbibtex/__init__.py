@@ -30,6 +30,10 @@ def bibtex_language():
         'Value': strip_value
     })
 
+    mm.model_param_defs.add("year", "filter by years")
+    mm.model_param_defs.add("type", "filter by type")
+    mm.model_param_defs.add("sort", "sort criteria - comma separated fields")
+
     return mm
 
 
