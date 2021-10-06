@@ -91,6 +91,9 @@ for entry in bibfile.entries:
 See the examples folder for some ideas. If you make some cool script for bib
 references cleanup I would like to see it in the examples folder!
 
+See also [the report generator for .bib
+files](https://github.com/igordejanovic/textx-gen-bibtex-report).
+
 
 ## Final notes
 
