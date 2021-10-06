@@ -23,6 +23,13 @@ A Python parser for BibTeX language implemented as a textX language.
 
 ## Installation
 
+Setup Python virtual environment (recommended):
+
+``` sh
+python -m venv venv
+source venv/bin/activate
+```
+
 Stable version (once it is published on PyPI):
 
 ```
